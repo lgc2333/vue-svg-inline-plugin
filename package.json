@@ -1,70 +1,50 @@
 {
-	"name": "@lgcnpm/vue-svg-inline-plugin",
-	"version": "2.2.5",
-	"description": "Vue plugin for inline replacement of SVG images with actual content of SVG files.",
-	"type": "module",
-	"main": "src/index.js",
-	"types": "src/index.d.ts",
-	"unpkg": "dist/vue-svg-inline-plugin.min.js",
-	"jsdelivr": "dist/vue-svg-inline-plugin.min.js",
-	"files": [
-		"index.js",
-		"dist/*.js",
-		"src/*.{js,d.ts}"
-	],
-	"directories": {
-		"example": "examples"
-	},
-	"scripts": {
-		"build": "npm run remove && npm run build:modern && npm run build:default",
-		"build:default": "npm run remove:default && npx cross-env IMPORT_POLYFILLS=1 npm run webpack",
-		"build:modern": "npm run remove:modern && npm run webpack",
-		"remove": "npm run remove:default && npm run remove:modern",
-		"remove:default": "npx rimraf dist/vue-svg-inline-plugin.min.js",
-		"remove:modern": "npx rimraf dist/vue-svg-inline-plugin-modern.min.js",
-		"webpack": "npx webpack --progress --color",
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/oliverfindl/vue-svg-inline-plugin.git"
-	},
-	"keywords": [
-		"vue",
-		"vuejs",
-		"plugin",
-		"vue-plugin",
-		"svg",
-		"inline",
-		"sprites",
-		"symbols",
-		"vue-svg-inline-plugin"
-	],
-	"author": "Oliver Findl",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/oliverfindl/vue-svg-inline-plugin/issues"
-	},
-	"homepage": "https://github.com/oliverfindl/vue-svg-inline-plugin#readme",
-	"dependencies": {
-		"core-js": "^3.25.2",
-		"intersection-observer": "^0.12.2",
-		"whatwg-fetch": "^3.6.2"
-	},
-	"devDependencies": {
-		"@babel/core": "^7.19.1",
-		"@babel/eslint-parser": "^7.19.1",
-		"@babel/preset-env": "^7.19.1",
-		"babel-loader": "^8.2.5",
-		"babel-plugin-remove-template-literals-whitespace": "^1.0.4",
-		"cross-env": "^7.0.3",
-		"eslint": "^8.23.1",
-		"eslint-plugin-vue": "^9.5.1",
-		"eslint-webpack-plugin": "^3.2.0",
-		"rimraf": "^3.0.2",
-		"terser-webpack-plugin": "^5.3.6",
-		"webpack": "^5.74.0",
-		"webpack-bundle-analyzer": "^4.6.1",
-		"webpack-cli": "^4.10.0"
-	}
+  "name": "@lgcnpm/vue-svg-inline-plugin",
+  "version": "2.2.6",
+  "description": "Vue plugin for inline replacement of SVG images with actual content of SVG files.",
+  "type": "module",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "files": [
+    "index.js",
+    "dist/*.js",
+    "src/*.{js,d.ts}"
+  ],
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oliverfindl/vue-svg-inline-plugin.git"
+  },
+  "keywords": [
+    "vue",
+    "vuejs",
+    "plugin",
+    "vue-plugin",
+    "svg",
+    "inline",
+    "sprites",
+    "symbols",
+    "vue-svg-inline-plugin"
+  ],
+  "author": "Oliver Findl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oliverfindl/vue-svg-inline-plugin/issues"
+  },
+  "homepage": "https://github.com/oliverfindl/vue-svg-inline-plugin#readme",
+  "dependencies": {
+    "core-js": "^3.25.2",
+    "intersection-observer": "^0.12.2",
+    "whatwg-fetch": "^3.6.2"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "eslint": "^8.23.1",
+    "eslint-plugin-vue": "^9.5.1"
+  }
 }
