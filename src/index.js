@@ -191,10 +191,10 @@ const install = (VueOrApp = null, options = {}) => {
   const isVue3 = /* !(VueOrApp instanceof Function) && */ VueOrApp.version.startsWith('3.')
 
   /* check if fetch is available */
-  options._fetch = 'fetch' in window && typeof fetch === _fnc
+  options._fetch = 'fetch' in globalThis && typeof fetch === _fnc
 
   /* check if axios is available */
-  options._axios = 'axios' in window && typeof axios === _fnc
+  options._axios = 'axios' in globalThis && typeof axios === _fnc
 
   /**
    * Validate Axios instance get method.
@@ -220,7 +220,7 @@ const install = (VueOrApp = null, options = {}) => {
     throw new Error(`[${PACKAGE_NAME}] Feature is not supported by browser! [fetch || axios]`)
 
   /* check if intersection observer is available */
-  options._observer = 'IntersectionObserver' in window
+  options._observer = 'IntersectionObserver' in globalThis
 
   /* throw error if intersection observer is not available */
   // We log error instead and disable lazy processing of image nodes in processing function - processImageNode().
@@ -231,7 +231,7 @@ const install = (VueOrApp = null, options = {}) => {
     ) // eslint-disable-line no-console
 
   /* check if local storage is available */
-  options._storage = 'localStorage' in window
+  options._storage = 'localStorage' in globalThis
 
   /* throw error if local storage is not available */
   // We log error instead and disable caching of SVG files in processing function - fetchSvgFile().
